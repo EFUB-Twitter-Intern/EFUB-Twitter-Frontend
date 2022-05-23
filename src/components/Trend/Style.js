@@ -64,10 +64,17 @@ export const FollowerBtn = styled.div`
 
   font-weight: bold;
 `;
-
-export const TrendsMore = styled.div`
+export const Trendshow = styled.div`
   font-size: 17px;
   font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  color: black;
+`;
+export const TrendsMore = styled.div`
+  font-size: 17px;
+  font-weight: 300;
   width: 100%;
   color: #1d9bf0;
   cursor: pointer;

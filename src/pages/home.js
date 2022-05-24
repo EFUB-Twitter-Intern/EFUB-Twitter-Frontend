@@ -44,7 +44,7 @@ const SideSection = styled.div`
 const Searchwrap = styled.div`
   position: sticky;
   top: 0;
-  background-color: ${colors.white[1]};
+  background: transparent;
   padding: 6px 0;
 `;
 function Home(){

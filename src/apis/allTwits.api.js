@@ -1,3 +1,4 @@
+import { serverAxios } from './index';
 
 const PREFIX_URL = '/boards';
 

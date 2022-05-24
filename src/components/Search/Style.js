@@ -1,5 +1,8 @@
 import styled from "styled-components"
-
+export const Wrapper = styled.div`
+  width:100%;
+  background:transparent;
+`
 export const SearchArea = styled.div`
   background: #f0f3f4;
   border-radius: 30px;

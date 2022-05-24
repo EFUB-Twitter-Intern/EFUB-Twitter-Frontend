@@ -1,5 +1,5 @@
 import React from "react";
-import { SearchArea,SearchBar } from "./Style";
+import { SearchArea,SearchBar,Wrapper } from "./Style";
 import { FiSearch } from "react-icons/fi";
 function Search(){
    return(

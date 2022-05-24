@@ -1,8 +1,8 @@
-import { Container, Inputdex, JoinBtn } from "./Style";
+import { Container, IdPasswd, IdBtn, PwdBtn } from "./style";
 import { TwitLogo, Text } from "components/Menu/style";
 import { Twit } from "assets/image";
 
-function Join() {
+const Login = () => {
   return (
     <Container>
       <TwitLogo
@@ -13,16 +13,16 @@ function Join() {
         margin="120px 0px 10px 0px"
       />
       <Text fontSize="28px" fontWeight="bold" marginTop="10px">
-        Join to Twitter
+        Login to Twitter
       </Text>
       <Container margin="50px 0px 10px 0px">
-        <Inputdex type="id" placeholder="사용자 ID 입력하세요"></Inputdex>
-        <Inputdex type="password" placeholder="password 입력"></Inputdex>
-        <Inputdex type="password" placeholder="password 확인"></Inputdex>
+        <IdPasswd type="id" placeholder="phone, email, or username"></IdPasswd>
+        <IdPasswd type="password" placeholder="password"></IdPasswd>
       </Container>
-      <JoinBtn type="button">완료</JoinBtn>
+      <IdBtn type="button">로그인</IdBtn>
+      <PwdBtn type="button">회원가입하러 가기</PwdBtn>
     </Container>
   );
 };
 
-export default Join;
+export default Login;

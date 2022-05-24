@@ -1,4 +1,4 @@
-import { Container, Inputdex, JoinBtn } from "./Style";
+import { Container, Inputdex, JoinBtn } from "./style";
 import { TwitLogo, Text } from "components/Menu/style";
 import { Twit } from "assets/image";
 
@@ -23,6 +23,6 @@ function Join() {
       <JoinBtn type="button">완료</JoinBtn>
     </Container>
   );
-};
+}
 
 export default Join;

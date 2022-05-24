@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 function Search(){
    return(
     <SearchArea>
-        <FiSearch style={{ paddingLeft: "20px", paddingRight: "10px" }} />
+        <FiSearch style={{ fontSize:16, marginLeft:8 }} />
         <form>
             <SearchBar type="text" name="search" placeholder="트위터 검색" />
         </form>

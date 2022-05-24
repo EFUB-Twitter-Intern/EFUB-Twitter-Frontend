@@ -19,6 +19,16 @@ function Follow() {
               </FollowerAvatar>
               <FollowerBtn>팔로우</FollowerBtn>
             </Follower>
+            <Follower>
+              <FollowerAvatar>
+                <img src={avatarImage} alt="임시 프로필 사진" />
+                <FollowerUser>
+                  <h3>EFUB1</h3>
+                  <span>#한국 #재밌어요</span>
+                </FollowerUser>
+              </FollowerAvatar>
+              <FollowerBtn>팔로우</FollowerBtn>
+            </Follower>
           <TrendsMore>더 보기</TrendsMore>
         </TrendsContainer>
       </StyledRoot>

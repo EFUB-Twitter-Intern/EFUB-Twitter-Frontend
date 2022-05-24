@@ -7,6 +7,9 @@ export const SearchArea = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 12px;
 `;
 
 export const SearchBar = styled.input`
@@ -16,4 +19,5 @@ export const SearchBar = styled.input`
   overflow: hidden;
   resize: none;
   outline: none;
+  margin-left: 4px;
 `;

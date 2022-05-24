@@ -1,4 +1,4 @@
-import { Container, Inputdex, JoinBtn } from "./style";
+import { Container, Inputdex, JoinBtn } from "./Style";
 import { TwitLogo, Text } from "components/Menu/style";
 import { Twit } from "assets/image";
 

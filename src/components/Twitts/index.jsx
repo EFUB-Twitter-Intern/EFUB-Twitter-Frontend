@@ -16,10 +16,7 @@ import { twitDelete } from 'apis/twitDelete.api';
 import { ProfileImage } from 'assets/image';
 
 
-const Twitts = ({data, type}) => {
-
- 
-
+function Twitts(data, type) {
   const ondeleteTwit=async()=>{
     const response=await twitDelete(data.id, data.userResDto.profile.nickname);
     console.log("ondeleteTwit",response);
@@ -69,44 +66,34 @@ const Twitts = ({data, type}) => {
         <TwitInfo>
           <div>
             <Text weight={fonts.weight.bold} color={colors.black[2]}>
-              {data.userResDto.profile.nickname}
+              EFUB
             </Text>
             <Text weight={fonts.weight.regular} color={colors.grey[1]}>
-              @{data.userResDto.email.split("@")[0]}
+              @EFUB123
             </Text>
             <Text weight={fonts.weight.regular} color={colors.grey[1]}>
-              
-         
-              {displayedAt()}
+              방금 전
             </Text>
           </div>
           <div>
-            {type?null:        <Link to={`/boards/${data.id}?nickname=${data.userResDto.profile.nickname}`}> 
-          <FontAwesomeIcon icon={faEllipsis} color={colors.grey[1]} size="sm" />
-          </Link>}
-  
+            <FontAwesomeIcon icon={faEllipsis} color={colors.grey[1]} size="sm" />
           </div>
         </TwitInfo>
 
-        <TwitContent >{data.description}</TwitContent>
-        
+        <TwitContent >안녕하세요!!</TwitContent>
        
         <TwitHash>
-        {data.hashTags.map((hash,idx)=> {
-            
-       
-            return <div 
-             key={idx}>
+            <div>
               <FontAwesomeIcon icon={faHashtag} color={colors.blue[1]} 
-               size="sm" />{hash.keyword}</div>})}
+               size="sm" />인사</div>
         </TwitHash>
         {type?<TwitDetail color={colors.grey[3]}>     <Text weight={fonts.weight.regular} color={colors.grey[2]}>
               
-             {showHHMM()}
+             08:35
               
             </Text><Text weight={fonts.weight.regular} color={colors.grey[2]}>
               
-            {showYYYYMMDD()} 
+              2022.05.24 
               
             </Text></TwitDetail>:null}
         <TwitIcon>

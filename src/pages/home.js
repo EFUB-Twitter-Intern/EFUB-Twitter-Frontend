@@ -5,40 +5,70 @@ import Search from "components/Search";
 import Follow from "components/Follow";
 import Menu from "components/Menu";
 import Post from "components/Post";
-const Left_sidebar = styled.div`
-    width:20%;
-    align-items: left;
+import Twitts from "components/Twitts";
+import { colors, fonts } from 'styles/styleOption';
+const StyledRoot = styled.div`
+  padding: 4px 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
-const Right_sidebar = styled.div`
-    align-items: right;
-    flex-direction: column;
-    width: 30%;
-    margin-right: 100px;
+
+const MidSection = styled.div`
+  width: 50%;
 `;
-const Mid_Home = styled.div`
-    width:40%;
-    align-items: center;
-    flex-direction: column;
+const HomeContainer = styled.div`
+  padding: 12px 16px;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: ${colors.white[1]};
+  span {
+    font-size: ${fonts.size.large};
+    font-weight: ${fonts.weight.bold};
+  }
 `;
-const Wrapper = styled.div`
-    display: flex;
-    flex-direction: row;
+
+const ListSection = styled.div`
+  overflow: visible;
+`;
+const SideSection = styled.div`
+  position: sticky;
+  top: 0;
+  left: ${(props) => props.left};
+`;
+
+const Searchwrap = styled.div`
+  position: sticky;
+  top: 0;
+  background-color: ${colors.white[1]};
+  padding: 6px 0;
 `;
 function Home(){
     return(
-        <Wrapper>
-            <Left_sidebar>
-                <Menu/>
-            </Left_sidebar>
-            <Mid_Home>
-                <Post/>
-            </Mid_Home>
-            <Right_sidebar>
-                <Search/>
-                <Trend/>
-                <Follow/>
-            </Right_sidebar>
-        </Wrapper>
+        <>
+            <StyledRoot>
+                <SideSection left = {0}>
+                    <Menu/>
+                </SideSection>
+                <MidSection>
+                    <ListSection>
+                        <Post/>
+                        <Twitts/>
+                    </ListSection>
+                </MidSection>
+                <SideSection>
+                    <Searchwrap>
+                        <Search/>
+                    </Searchwrap>
+                    <Trend/>
+                    <Follow/>
+                </SideSection>
+            </StyledRoot>
+        </>
     );
 }
 export default Home;

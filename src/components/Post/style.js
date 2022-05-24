@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "styles/styleOption";
+import { colors, BORDER_RADIUS, fonts  } from "styles/styleOption";
 
 export const Container = styled.div`
   display: flex;
@@ -13,10 +13,9 @@ export const Top = styled.div`
   display: flex;
   flex-direction: row;
   margin: 20px 0px 0px 10px;
-  position: fixed;
 `;
 
-export const Home = styled.div`
+export const HomeW = styled.div`
   font-size: 22px;
   font-weight: bold;
   margin: 0px 0px 0px 5px;
@@ -25,13 +24,13 @@ export const Home = styled.div`
 export const ChoiceImg = styled.img`
   width: 28px;
   height: px;
-  margin-left: 600px;
+  margin-left: 450px;
 `;
 
 export const PostTop = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 60px 0px 0px 10px;
+  margin: 20px 0px 0px 10px;
 `;
 
 export const Input = styled.textarea`
@@ -40,18 +39,25 @@ export const Input = styled.textarea`
   width: 450px;
   border: none;
   resize: none;
-  word-wrap: break-word;
-  word-break: break-word;
-  font-size: 20px;
+  font-size: ${fonts.size.medium};
 `;
 
 export const PostBottom = styled.div`
   display: flex;
   flex-direction: row;
-  width: 600px;
   justify-content: space-between;
-  align-items: baseline;
-  margin-left: 50px;
+  margin-top: 1rem;
+  align-items: center;
+  button {
+    padding: 3px 12px;
+    color: ${colors.white[1]};
+    font-weight: ${fonts.weight.bold};
+    background-color: ${colors.blue[1]};
+    border: 1px solid ${colors.blue[1]};
+    border-radius: ${BORDER_RADIUS};
+    margin-left: 200px;
+    margin-bottom: 3px;
+  }
 `;
 
 export const Icon = styled.div`

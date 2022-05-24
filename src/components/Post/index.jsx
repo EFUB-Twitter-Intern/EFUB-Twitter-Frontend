@@ -4,7 +4,7 @@ import {
   PostTop,
   Input,
   PostBottom,
-  Home,
+  HomeW,
   ChoiceImg,
   PostIcon,
   Icon,
@@ -20,12 +20,11 @@ import {
   Schedule,
   Location,
 } from "assets/image";
-
 function Post() {
   return (
     <Container>
       <Top>
-        <Home>홈</Home>
+        <HomeW>홈</HomeW>
         <ChoiceImg src={Choice} alt="choice logo" />
       </Top>
       <PostTop>
@@ -44,14 +43,7 @@ function Post() {
           <PostIcon src={Emoji} alt="emoji" />
           <PostIcon src={Schedule} alt="schedule" />
           <PostIcon src={Location} alt="location" />
-          <Btn
-            type="button"
-            height="35px"
-            width="50"
-            margin-left="100px"
-          >
-            트윗하기
-          </Btn>
+          <button>트윗하기</button>
         </Icon>
       </PostBottom>
     </Container>

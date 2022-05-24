@@ -6,7 +6,6 @@ import Follow from "components/Follow";
 import Menu from "components/Menu";
 import Post from "components/Post";
 import Twitts from "components/Twitts";
-import { colors, fonts } from 'styles/styleOption';
 const StyledRoot = styled.div`
   padding: 4px 10%;
   display: flex;
@@ -16,20 +15,6 @@ const StyledRoot = styled.div`
 
 const MidSection = styled.div`
   width: 50%;
-`;
-const HomeContainer = styled.div`
-  padding: 12px 16px;
-  position: sticky;
-  top: 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: ${colors.white[1]};
-  span {
-    font-size: ${fonts.size.large};
-    font-weight: ${fonts.weight.bold};
-  }
 `;
 
 const ListSection = styled.div`

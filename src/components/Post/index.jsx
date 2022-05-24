@@ -47,8 +47,8 @@ function Post() {
           <Btn
             type="button"
             height="35px"
-            width="100px"
-            margin="5px 0px 0px 250px"
+            width="50"
+            margin-left="100px"
           >
             트윗하기
           </Btn>

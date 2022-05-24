@@ -4,6 +4,8 @@ import { colors } from "styles/styleOption";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid ${colors.grey[3]};
   /* margin: 0px 0px 50px 300px; */
 `;
 
@@ -35,7 +37,7 @@ export const PostTop = styled.div`
 export const Input = styled.textarea`
   margin: 10px 0px 0px 20px;
   height: 80px;
-  width: 550px;
+  width: 450px;
   border: none;
   resize: none;
   word-wrap: break-word;

@@ -1,7 +1,7 @@
 import { Container, IdPasswd, IdBtn, PwdBtn } from "./style";
 import { TwitLogo, Text } from "components/Menu/style";
 import { Twit } from "assets/image";
-
+import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <Container>
@@ -19,8 +19,12 @@ const Login = () => {
         <IdPasswd type="id" placeholder="phone, email, or username"></IdPasswd>
         <IdPasswd type="password" placeholder="password"></IdPasswd>
       </Container>
-      <IdBtn type="button">로그인</IdBtn>
-      <PwdBtn type="button">회원가입하러 가기</PwdBtn>
+      <Link to = "/home">
+        <IdBtn type="button">로그인</IdBtn>
+      </Link>
+      <Link to = "/join">
+        <PwdBtn type="button">회원가입하러 가기</PwdBtn>
+      </Link>
     </Container>
   );
 };

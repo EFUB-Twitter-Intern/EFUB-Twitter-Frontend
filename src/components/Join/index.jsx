@@ -1,7 +1,7 @@
 import { Container, Inputdex, JoinBtn } from "./Style";
 import { TwitLogo, Text } from "components/Menu/style";
 import { Twit } from "assets/image";
-
+import { Link } from "react-router-dom";
 function Join() {
   return (
     <Container>
@@ -20,7 +20,9 @@ function Join() {
         <Inputdex type="password" placeholder="password 입력"></Inputdex>
         <Inputdex type="password" placeholder="password 확인"></Inputdex>
       </Container>
-      <JoinBtn type="button">완료</JoinBtn>
+      <Link to = "/home">
+        <JoinBtn type="button">완료</JoinBtn>
+      </Link>
     </Container>
   );
 }

@@ -19,7 +19,7 @@ const Login = () => {
         <IdPasswd type="id" placeholder="phone, email, or username"></IdPasswd>
         <IdPasswd type="password" placeholder="password"></IdPasswd>
       </Container>
-      <Link to = "/home">
+      <Link to ="/Home">
         <IdBtn type="button">로그인</IdBtn>
       </Link>
       <Link to = "/join">

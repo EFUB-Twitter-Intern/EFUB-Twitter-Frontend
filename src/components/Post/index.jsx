@@ -1,53 +1,45 @@
-import {
-  Container,
-  Top,
-  PostTop,
-  Input,
-  PostBottom,
-  HomeW,
-  ChoiceImg,
-  PostIcon,
-  Icon,
-} from "./style";
-import { ProfileImg, Btn } from "components/Menu/style";
-import {
-  ProfileImage,
-  Choice,
-  Gallery,
-  Gif,
-  Graph,
-  Emoji,
-  Schedule,
-  Location,
-} from "assets/image";
-function Post() {
-  return (
-    <Container>
-      <Top>
-        <HomeW>홈</HomeW>
-        <ChoiceImg src={Choice} alt="choice logo" />
-      </Top>
-      <PostTop>
-        <ProfileImg src={ProfileImage} alt="profile" />
-        <Input
-          name="newTwit"
-          maxLength={140}
-          placeholder="무슨 일이 일어나고 있나요?"
-        />
-      </PostTop>
-      <PostBottom>
-        <Icon>
-          <PostIcon src={Gallery} alt="gallery" />
-          <PostIcon src={Gif} alt="gif" />
-          <PostIcon src={Graph} alt="graph" />
-          <PostIcon src={Emoji} alt="emoji" />
-          <PostIcon src={Schedule} alt="schedule" />
-          <PostIcon src={Location} alt="location" />
-          <button>트윗하기</button>
-        </Icon>
-      </PostBottom>
-    </Container>
-  );
-}
+import React, { useState, useRef, useEffect } from 'react';
 
-export default Post;
+import { ProfileImage } from 'assets/image';
+import {
+  faImage,
+  faFile,
+  faBarsProgress,
+  faSmile,
+  faCalendar,
+  faLocationPin,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { colors, BORDER_RADIUS, fonts } from 'styles/styleOption';
+import {StyledRoot,PostWrap,Textarea,PostControl,PostIcon} from "./style";
+import {twitPost} from "apis/twitPost.api";
+
+
+function Post() {
+
+
+    return (
+      <StyledRoot>
+        <img src={ProfileImage} alt="임시 프로필 사진"></img>
+        <PostWrap>
+          <Textarea
+            placeholder="무슨 일이 일어나고 있나요?"
+          ></Textarea>
+            
+          <PostControl>
+
+            <PostIcon>
+              <FontAwesomeIcon icon={faImage} color={colors.grey[1]} size="sm" />
+              <FontAwesomeIcon icon={faFile} color={colors.grey[1]} size="sm" />
+              <FontAwesomeIcon icon={faBarsProgress} color={colors.grey[1]} size="sm" />
+              <FontAwesomeIcon icon={faSmile} color={colors.grey[1]} size="sm" />
+              <FontAwesomeIcon icon={faCalendar} color={colors.grey[1]} size="sm" />
+              <FontAwesomeIcon icon={faLocationPin} color={colors.grey[1]} size="sm" />
+            </PostIcon>
+            <button>트윗하기</button>
+          </PostControl>
+        </PostWrap>
+      </StyledRoot>
+    );
+  };
+  export default Post;

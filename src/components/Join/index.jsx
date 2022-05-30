@@ -20,7 +20,7 @@ function Join() {
         <Inputdex type="password" placeholder="password 입력"></Inputdex>
         <Inputdex type="password" placeholder="password 확인"></Inputdex>
       </Container>
-      <Link to = "/home">
+      <Link to = "/">
         <JoinBtn type="button">완료</JoinBtn>
       </Link>
     </Container>

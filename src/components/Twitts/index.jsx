@@ -66,7 +66,7 @@ function Twitts(data, type) {
         <TwitInfo>
           <div>
             <Text weight={fonts.weight.bold} color={colors.black[2]}>
-              EFUB
+              이퍼비
             </Text>
             <Text weight={fonts.weight.regular} color={colors.grey[1]}>
               @EFUB123
@@ -80,7 +80,7 @@ function Twitts(data, type) {
           </div>
         </TwitInfo>
 
-        <TwitContent >안녕하세요!!</TwitContent>
+        <TwitContent >안녕하세요!</TwitContent>
        
         <TwitHash>
             <div>
@@ -89,11 +89,11 @@ function Twitts(data, type) {
         </TwitHash>
         {type?<TwitDetail color={colors.grey[3]}>     <Text weight={fonts.weight.regular} color={colors.grey[2]}>
               
-             08:35
+              08:57
               
             </Text><Text weight={fonts.weight.regular} color={colors.grey[2]}>
               
-              2022.05.24 
+            2022/05/29
               
             </Text></TwitDetail>:null}
         <TwitIcon>
